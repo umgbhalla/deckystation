@@ -1,0 +1,12 @@
+{
+  "buttons": ["L1", "R1"],
+  "enabled": true,
+  "game": "generic",
+  "sendingMode": "immediate",
+  "manualSend": true,
+  "shareDiagnostics": false,
+  "modelSize": "base",
+  "transcriptionLanguage": "auto",
+  "translateToEnglish": false,
+  "recordingIndicator": "toast"
+}

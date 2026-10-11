@@ -1,0 +1,30 @@
+{
+  "herdr": {
+    "version": "0.9.0",
+    "url": "https://github.com/herdrdev/herdr/releases/download/v0.9.0/herdr-linux-x86_64",
+    "sha256": "4fa1a01158dd8043da92d31b270780b0dcc10603038d9b61cac4d81ab63fb71f"
+  },
+  "herdr-gpui": {
+    "version": "20261011.1",
+    "url": "https://github.com/penso/herdr-gpui/releases/download/v20261011.1/Herdr-20261011.1-x86_64-unknown-linux-gnu.tar.gz",
+    "sha256": "4df65abb867ccdc40421e9bf77b0a04202912d8fcd3db515bc4477d985923efa"
+  },
+  "decktation": {
+    "version": "0.3.18",
+    "url": "https://github.com/silverfoxy/decktation/releases/download/v0.3.18/decktation.zip",
+    "sha256": "8115bbdb4b1e9ac41137ba58ab3e4f908247a206830b01ad97eb87cf9eb3e923"
+  },
+  "parakeet-vulkan": {
+    "version": "0.6.1",
+    "url": "https://github.com/mudler/parakeet.cpp/releases/download/v0.6.1/parakeet-v0.6.1-bin-linux-vulkan-x64.tar.gz",
+    "sha256": "881fd99d531a4dcfc26119a4969aec61b8390ba84e9d641716411d4c1db2de3a"
+  },
+  "parakeet-v3-q4": {
+    "url": "https://huggingface.co/mudler/parakeet-cpp-gguf/resolve/main/tdt-0.6b-v3-q4_k.gguf",
+    "sha256": "993d73feb4206dadda865ab25bd64b50c48dc4d013c3bf6126a721f28b1d5ee8"
+  },
+  "parakeet-110m-q8": {
+    "url": "https://huggingface.co/mudler/parakeet-cpp-gguf/resolve/main/tdt_ctc-110m-q8_0.gguf",
+    "sha256": "614feee3a990cf0e672b0314f4da0c80ae8da9094507f5ccb7c42e43b5fc5a12"
+  }
+}

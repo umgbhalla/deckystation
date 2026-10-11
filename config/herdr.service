@@ -1,0 +1,12 @@
+[Unit]
+Description=Herdr terminal workspace server
+
+[Service]
+ExecStart=%h/.local/bin/herdr server
+WorkingDirectory=%h/hub
+Environment=PATH=%h/.local/bin:/usr/local/bin:/usr/bin:/bin
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=default.target

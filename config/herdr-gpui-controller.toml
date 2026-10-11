@@ -1,0 +1,12 @@
+# Merge into ~/.config/herdr/config-gpui.local.toml if defaults were changed.
+# Keep your existing theme and layout settings.
+[keybindings]
+new_tab = "cmd-t"
+previous_tab = "cmd-shift-["
+next_tab = "cmd-shift-]"
+focus_left = "cmd-alt-left"
+focus_right = "cmd-alt-right"
+toggle_zoom = "cmd-shift-enter"
+toggle_sidebar = "cmd-b"
+workspace_picker = "cmd-p"
+command_palette = "cmd-shift-p"

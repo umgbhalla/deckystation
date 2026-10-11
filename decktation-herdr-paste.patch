@@ -1,0 +1,43 @@
+--- a/bin/clipboard_injection.py
++++ b/bin/clipboard_injection.py
+@@ -169,3 +169,18 @@
+                         "Could not restore previous clipboard text after paste (%s)",
+                         type(exc).__name__,
+                     )
++
++
++def paste_modifier():
++    """Herdr's semantic paste is Super+V; games use Ctrl+V."""
++    try:
++        env = _clipboard_env()
++        focused = subprocess.check_output(
++            ["/usr/bin/xprop", "-display", ":0", "-root", "GAMESCOPE_FOCUSED_APP"],
++            text=True, timeout=1, stderr=subprocess.DEVNULL,
++            env=env, **_process_identity(env),
++        ).strip()
++        # shortcut: this installed Steam shortcut ID; update if Herdr is re-added.
++        return "125" if focused == "GAMESCOPE_FOCUSED_APP(CARDINAL) = 2380454464" else "29"
++    except (OSError, subprocess.SubprocessError):
++        return "29"
+--- a/bin/wow_voice_chat.py
++++ b/bin/wow_voice_chat.py
+@@ -24,7 +24,7 @@
+ import numpy as np
+ import wave
+ from audio_runtime import ensure_audio_environment
+-from clipboard_injection import temporary_clipboard
++from clipboard_injection import temporary_clipboard, paste_modifier
+ from resident_whisper import ResidentWhisper
+ 
+ 
+@@ -888,8 +888,9 @@
+             # Paste the whole message, including any game channel prefix, so
+             # punctuation is independent of the host keyboard layout.
+             with temporary_clipboard(full_message, plugin_dir):
++                modifier = paste_modifier()
+                 result = subprocess.run(
+-                    [ydotool, "key", "29:1", "47:1", "47:0", "29:0"],
++                    [ydotool, "key", f"{modifier}:1", "47:1", "47:0", f"{modifier}:0"],
+                     capture_output=True,
+                     text=True,
+                     env=env,

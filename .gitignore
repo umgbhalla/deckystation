@@ -1,0 +1,7 @@
+/evidence/
+/.venv/
+__pycache__/
+*.pyc
+.DS_Store
+*.before-*
+*.backup-*
